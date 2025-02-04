@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(5, 5, 49);/* Gradient background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height for better responsiveness */
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Slightly less opaque background */
+    backdrop-filter: blur(10px); /* Adjusted blur */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+    width: 90%; /* Responsive width */
+    max-width: 600px;
+    animation: fadeInUp 1s ease-in-out; /* Faster animation */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Subtle scale on hover */
+}
+
+header h1 {
+    font-size: 2.8rem; /* Slightly smaller heading */
+    color: #FFD700;
+    margin-bottom: 15px; /* Reduced margin */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Adjusted letter spacing */
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Softer glow */
+}
+
+header p {
+    font-size: 1.2rem; /* Adjusted font size */
+    color: #e0e0e0;
+    margin-bottom: 25px; /* Reduced margin */
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adjusted shadow */
+}
+
+.form-group {
+    margin-bottom: 18px; /* Adjusted margin */
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 6px; /* Reduced margin */
+    font-weight: 600; /* Slightly less bold */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Adjusted padding */
+    margin-top: 6px; /* Reduced margin */
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Softer border */
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Less opaque background */
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+input:focus {
+    border-color: #FFD700;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Adjusted glow */
+}
+
+button {
+    padding: 14px 28px; /* Adjusted padding */
+    background-color: #FFD700;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem; /* Adjusted font size */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+    margin-top: 15px; /* Reduced margin */
+}
+
+button:hover {
+    background-color: #FFCC00;
+    transform: translateY(-3px); /* Reduced translate */
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5); /* Adjusted shadow */
+}
+
+button:active {
+    transform: translateY(1px); /* Reduced translate */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
+/* Result box styling */
+.result {
+    margin-top: 30px; /* Reduced margin */
+    padding: 20px; /* Adjusted padding */
+    background: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4); /* Adjusted shadow */
+    animation: fadeInUp 1s ease-in-out; /* Faster animation */
+}
+
+.result h2 {
+    font-size: 1.6rem; /* Adjusted font size */
+    color: #FFD700;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.result p {
+    font-size: 1.1rem; /* Adjusted font size */
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Reduced translate */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px; /* Adjusted padding */
+    }
+
+    header h1 {
+        font-size: 2.2rem; /* Adjusted font size */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+
+    button {
+        padding: 12px 24px; /* Adjusted padding */
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .result {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .result h2 {
+        font-size: 1.4rem; /* Adjusted font size */
+    }
+
+    .result p {
+        font-size: 1rem; /* Adjusted font size */
+    }
+}
