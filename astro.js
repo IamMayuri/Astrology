@@ -129,23 +129,25 @@ const form = document.getElementById("dobForm");
 form.addEventListener('submit',(event)=>{
     event.preventDefault();
 
-    const name=document.getElementById('name').value;
-    const day=document.getElementById('day').value;
-    const month=document.getElementById('month').value;
-    const year=document.getElementById('year').value;
+     const name = document.getElementById('name').value;
+    const day = parseInt(document.getElementById('day').value);
+    const month = parseInt(document.getElementById('month').value);
+    const year = parseInt(document.getElementById('year').value);
 
  const result=document.getElementById('result');
 
-const yourname=`"Hello ${name}`;
-const birthmonth =`Your Zodiac Sign is ${zodiac_sign[month-1]}`;
-const birthdate=`${compliments[day-1]}`; 
-const victim_msg=`${victim_compliments[victim_compliments-1]}`;
+ const yourname = `"Hello ${name}"`;
+    const birthmonth = `Your Zodiac Sign is ${zodiac_sign[month - 1]}`;
+    const birthdate = compliments[day - 1];
+    const victim_msg = victim_compliments[Math.floor(Math.random() * victim_compliments.length)]; // for random complement
+
 
 index = (name.length*year.length)%30;
 const kind_rec = kindness_recommendations[index];
 index =(day*month*year)%20;
 const future = futurePredictions[index];
 result.innerText=`${yourname} ${birthmonth} ${birthdate} ${victim_msg} ${kind_rec} ${future} "Thankyou! All the best for your future."`;
-},24 * 60 * 60 * 1000);
+}
+                      //,24 * 60 * 60 * 1000); // what is this ?
  
 
